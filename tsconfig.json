@@ -9,6 +9,8 @@
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
 
+    "moduleResolution": "node",
+
     "esModuleInterop": true,
     "types": ["node"],
 
