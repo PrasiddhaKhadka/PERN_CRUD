@@ -1,12 +1,13 @@
 import express, {Request, Response, Router} from 'express';
+import { getNotes,createNotes, getNotesDetails } from '../controllers/notes_controller';
 
 const notesRouter:Router = express.Router()
 
-notesRouter.get('/',(req:Request,res:Response):void =>{
-    res.status(200).json({
-        msg:'Success'
-    })
-})
+notesRouter.get('/',getNotes)
+notesRouter.get('/:id',getNotesDetails)
+notesRouter.post('/',createNotes)
+
+
 
 
 export default notesRouter;

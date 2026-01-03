@@ -7,6 +7,7 @@ import { connectDb, disconnectDb } from './db/db';
 config();
 const app = express();
 
+// middlware for parsing body of the request
 app.use(express.json())
 app.use(morgan('tiny'))
 
